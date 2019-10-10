@@ -5,6 +5,7 @@
     package="edu.wonder.youth.math.game">
 
     <dist:module dist:instant="true" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -14,8 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".SplashActivity">
+        <activity android:name=".ui.activity.LeaderBoardActivity"></activity>
+        <activity android:name=".ui.activity.MainActivity" />
+        <activity android:name=".ui.activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

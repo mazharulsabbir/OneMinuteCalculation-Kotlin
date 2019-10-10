@@ -1,11 +1,10 @@
-package edu.wonder.youth.math.game
+package edu.wonder.youth.math.game.ui.activity
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.core.os.postDelayed
+import edu.wonder.youth.math.game.R
 
 class SplashActivity : AppCompatActivity() {
 
