@@ -8,7 +8,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import de.hdodenhof.circleimageview.CircleImageView
 import edu.wonder.youth.math.game.R
-import edu.wonder.youth.math.game.view.model.LiveScore
+import edu.wonder.youth.math.game.view.model.LiveScoreViewModel
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,8 +16,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-        val score: Int = LiveScore().score
+//        val score: Int = LiveScoreViewModel(this@MainActivity).score
 
         val imageView = findViewById<CircleImageView>(R.id.avatar)
 
@@ -28,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
 
         findViewById<FloatingActionButton>(R.id.fab_play_btn).setOnClickListener {
-            Snackbar.make(it, "Play!", Snackbar.LENGTH_SHORT).show()
+            startActivity(Intent(this, PlayActivity::class.java))
         }
 
         findViewById<FloatingActionButton>(R.id.fab_history_btn).setOnClickListener {

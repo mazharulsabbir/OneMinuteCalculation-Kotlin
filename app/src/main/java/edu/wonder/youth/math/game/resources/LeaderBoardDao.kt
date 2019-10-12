@@ -6,7 +6,7 @@ import androidx.room.Dao
 import edu.wonder.youth.math.game.model.LeaderBoardRanking
 
 @Dao
-interface Dao {
+interface LeaderBoardDao {
 
     @Insert
     fun insert(leaderBoardRanking: LeaderBoardRanking)
@@ -17,7 +17,10 @@ interface Dao {
     @Delete
     fun delete(leaderBoardRanking: LeaderBoardRanking)
 
+    @Query("DELETE FROM local_db")
+    fun deleteAll()
+
     @Query("SELECT * FROM local_db ORDER BY score DESC")
-    fun leaderBoard(): LiveData<ArrayList<LeaderBoardRanking>>
+    fun leaderBoard(): LiveData<List<LeaderBoardRanking>>
 
 }

@@ -10,8 +10,11 @@ class SplashActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        AppCompatDelegate.MODE_NIGHT_YES
         setContentView(R.layout.activity_splash)
+
+//        AppCompatDelegate.setDefaultNightMode(
+//            AppCompatDelegate.MODE_NIGHT_YES
+//        )
 
         startActivity(Intent(this, MainActivity::class.java))
     }

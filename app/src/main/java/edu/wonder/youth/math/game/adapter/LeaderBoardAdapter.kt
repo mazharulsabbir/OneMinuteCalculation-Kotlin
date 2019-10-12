@@ -12,7 +12,7 @@ import edu.wonder.youth.math.game.R
 import edu.wonder.youth.math.game.model.LeaderBoardRanking
 
 class LeaderBoardAdapter(
-    private val userList: ArrayList<LeaderBoardRanking>,
+    private val userList: List<LeaderBoardRanking>,
     private val context: Context
 ) :
     RecyclerView.Adapter<LeaderBoardAdapter.ItemViewHolder>() {
